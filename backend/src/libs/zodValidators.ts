@@ -88,6 +88,13 @@ export const zEnrollmentBody = z.object({
   courseId: zCourseId,
 });
 
+// เปลี่ยนวิชา: courseId = วิชาเดิม, newCourseId = วิชาใหม่
+export const zEnrollmentPutBody = z.object({
+  studentId: zStudentId,
+  courseId: zCourseId,
+  newCourseId: zCourseId,
+});
+
 ////// User Validators //////
 export const zUserBody = z.object({
   username: zFirstName,
